@@ -7,6 +7,7 @@ angular.module('video-player')
 .directive('app', function() {
   return {
     // TODO
-    templateUrl: 'src/templates/app.html'
+    templateUrl: 'src/templates/app.html',
+    controller: 'VideoPlayerControl'
   };
 });
