@@ -1,8 +1,8 @@
 angular.module('video-player')
 
-.controller('VideoPlayerControl', ['$scope', function($scope) {
+.controller('VideoPlayerControl', function($scope) {
   $scope.videos = window.exampleVideoData;
-}])
+})
 
 .directive('app', function() {
   return {
