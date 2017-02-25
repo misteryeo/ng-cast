@@ -1,13 +1,20 @@
 angular.module('video-player')
 
-.controller('VideoPlayerControl', function($scope) {
-  $scope.videos = window.exampleVideoData;
-})
 
 .directive('app', function() {
   return {
     // TODO
+    scope: {},
     templateUrl: 'src/templates/app.html',
-    controller: 'VideoPlayerControl'
+    controller: function($scope) {
+      console.log($scope);
+      this.videos = window.exampleVideoData;
+      console.log(this);
+      this.selectVideo = function() {};
+      this.searchResults = function() {};
+      this.currentVideo = this.videos[0];
+    },
+    bindToController: true,
+    controllerAs: 'ctrl'
   };
 });
