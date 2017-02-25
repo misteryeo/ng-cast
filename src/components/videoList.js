@@ -11,7 +11,7 @@ angular.module('video-player')
     controller: function($scope) {
       console.log($scope);
     },
-    template: '<ul><video-list-entry ng-repeat="video in ctrl.videos"></video-list-entry></ul>"',
-    tempUrl: 'https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg'
+    //template: '<ul><video-list-entry ng-repeat="video in ctrl.videos track by $index"></video-list-entry></ul>"',
+    templateUrl: 'src/templates/videoList.html'
   };
 });
