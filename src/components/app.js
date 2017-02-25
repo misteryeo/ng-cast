@@ -13,6 +13,7 @@ angular.module('video-player')
       this.selectVideo = function() {};
       this.searchResults = function() {};
       this.currentVideo = this.videos[0];
+      this.onClick = function () { console.log('clicked'); };
     },
     bindToController: true,
     controllerAs: 'ctrl'
