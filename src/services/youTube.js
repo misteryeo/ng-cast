@@ -1,5 +1,5 @@
 angular.module('video-player')
-// Make sure to pass in the $http request in the function parameters
+// Make sure to pass in the $http request in the function parameteres
 .service('youTube', function($http) {
   // TODO
  // search function will contain this
@@ -10,14 +10,16 @@ angular.module('video-player')
       params: {
         q: query,
         maxResults: 5,
+        type: 'video',
+        part: 'snippet',
         key: window.YOUTUBE_API_KEY,
-        videoEmbeddable: true      
+        videoEmbeddable: 'true'      
       }
     }).then(function (response) {
-      // console.log(response);
-      callback(response);
+      console.log(response);
+      callback(response.data.items);
     }, function (response) {
-      console.log('error');
+      console.error(response);
     });
   };
 });
