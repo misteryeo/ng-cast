@@ -12,16 +12,19 @@ angular.module('video-player')
     controller: function(youTube) {
       this.videos = window.exampleVideoData;
       this.selectVideo = function() {};
+      this.searchComp = youTube;
       this.searchResults = (data) => {
         this.videos = data;
         this.currentVideo = this.videos[0];
       };
+      this.result = 'test';
       this.currentVideo = this.videos[0];
       this.onClick = (video) => {
         this.currentVideo = video;
       };
       console.log('what is this', this);
-      youTube.search('edward chan', this.searchResults);
+      youTube.search('investment banking bad', this.searchResults);
+
     },
   };
 });
