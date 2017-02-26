@@ -9,8 +9,9 @@ angular.module('video-player')
       onClick: '<'
     },
     controllerAs: 'ctrl',
+    restrict: 'E',
     bindToController: true,
-    controller: function($scope) {
+    controller: function() {
 
     },
     templateUrl: 'src/templates/videoList.html'

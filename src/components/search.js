@@ -5,14 +5,14 @@ angular.module('video-player')
     // TODO
     scope: {
       result: '<', // searchResults from app
-      search: '<' // youTube.search from app
+      search: '=' // youTube.search from app
     },
     controllerAs: 'ctrl',
     restrict: 'E',
     bindToController: true,
-    controller: function() {
-      this.handClick = () => {
-        this.searchComp.search(this.input, (data) => {
+    controller: function(youTube) {
+      this.handleClick = () => {
+        youTube.search(this.input, (data) => {
           this.result(data);
         });
       };

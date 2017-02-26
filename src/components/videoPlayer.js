@@ -15,3 +15,4 @@ angular.module('video-player')
     templateUrl: 'src/templates/videoPlayer.html'
   };
 });
+
